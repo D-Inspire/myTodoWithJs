@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.cont {
+  background-color: rgb(32, 157, 179);
+  width: 300px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 15px;
+  flex-direction: column;
+  gap: 10px;
+}
+.cont>form input{
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+}
+.cont>form input[value="Submit"]{
+    padding: 0 10px;
+}
+.cont>form input[value="Submit"]:active{
+    padding: 0 8px;
+    color: rgb(0,0,0,0.7);
+}
+.cont > div {
+  width: 100%;
+}
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 2px solid  rgb(241, 232, 232;
+  color: rgb(241, 232, 232);
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* for the edit pop-up box message and the effects afer it */
+.editBox {
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: rgb(237, 150, 150);
+  transform: translateX(170%);
+  transition: all 0.5s;
+  z-index: 3;
+}
+.extra {
+  transform: translateX(0);
+}
+.edit {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  outline: none;
+  padding-left: 10px;
+}
+.editBox > button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 2px solid blue;
+  background-color: blue;
+  color: white;
+}
+/* style for the cover-up background the pop-up*/
+.coverBackground {
+  z-index: 1;
+}
+.extra ~ .coverBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#delBox{
+    display: flex;
+    gap: 5px;
+}
