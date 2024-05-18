@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: aquamarine;
+        }
+        .linkBox{
+            width: 300px;
+            height: 40px;
+            border: 1px solid grey;
+            border-radius: 15px;
+            background-color: rgb(244, 235, 235);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">Generate your unique link</h1>
+    <button class="back">create</button>
+    <br>
+    <p class="linkBox"></p>
+    
+    <script>
+        let store = localStorage.getItem('data')
+        let heading_h1 = document.querySelector('h1')
+
+        // heading_h1.innerText = store
+        let Btn  = document.querySelector('.back');
+        let pval = document.querySelector('.linkBox')
+        Btn.onclick = ()=>{
+            let anchor = document.createElement('a')
+             let link = anchor.href = './mTodolist.html'
+             anchor.innerText = 'todoList'
+            pval.textContent = anchor
+        }
+    </script>
+</body>
+</html>
